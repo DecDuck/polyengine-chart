@@ -31,14 +31,14 @@ livenessProbe:
   httpGet:
     path: /
     port: http
-    initialDelaySeconds: 3
-    periodSeconds: 3
+  initialDelaySeconds: 3
+  periodSeconds: 3
 readinessProbe:
   httpGet:
     path: /
     port: http
-    initialDelaySeconds: 5
-    periodSeconds: 5
+  initialDelaySeconds: 5
+  periodSeconds: 5
 
 
 podSecurityContext:
