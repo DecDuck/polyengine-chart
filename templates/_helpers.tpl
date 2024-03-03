@@ -60,3 +60,16 @@ Create the name of the service account to use
 {{- default "default" .Values.serviceAccount.name }}
 {{- end }}
 {{- end }}
+
+{{/*
+Create a list of environment variables
+*/}}
+{{- define "helpers.list-env-variables"}}
+{{- range $key, $val := .Values.env }}
+- name: {{ $key }}
+  valueFrom:
+    secretKeyRef:
+      name: polyengine-secrets
+      key: {{ $key }}
+{{- end}}
+{{- end }}
