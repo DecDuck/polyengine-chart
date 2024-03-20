@@ -15,7 +15,7 @@ apiVersion: extensions/v1beta1
 {{- end }}
 kind: Ingress
 metadata:
-  name: {{ $fullName }}
+  name: {{ $fullName }}-zip-ingress
   labels:
     {{- include "polyengine-chart.labels" . | nindent 4 }}
   annotations:
